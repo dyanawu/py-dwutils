@@ -16,8 +16,7 @@ def sieve_one(number):
     sieve = smol_prime(number)
     if number in sieve:
         return True
-    is_prime = [number % x for x in sieve]
-    return all(is_prime)
+    return all([number % x for x in sieve])
 
 def gen_primes(number):
     sieve = smol_prime(number)
